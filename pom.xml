@@ -26,7 +26,7 @@
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.parent</artifactId>
     <version>1.2.6</version>
-    <relativePath>../../parent/pom.xml</relativePath>
+    <relativePath />
   </parent>
 
   <groupId>io.wcm.maven.skins</groupId>
@@ -38,9 +38,9 @@
   <description>Velocity tools supporting Reflow Maven skin - derived from https://github.com/andriusvelykis/reflow-maven-skin/tree/master/reflow-velocity-tools</description>
 
   <scm>
-    <connection>scm:git:https://github.com/wcm-io/wcm-io-tooling.git</connection>
-    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-tooling.git</developerConnection>
-    <url>https://github.com/wcm-io/wcm-io-tooling</url>
+    <connection>scm:git:https://github.com/wcm-io/io.wcm.maven.skins.reflow-velocity-tools.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/io.wcm.maven.skins.reflow-velocity-tools.git</developerConnection>
+    <url>https://github.com/wcm-io/io.wcm.maven.skins.reflow-velocity-tools</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -94,6 +94,36 @@
       </plugin>
 
     </plugins>
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <groupId>com.amashchenko.maven.plugin</groupId>
+          <artifactId>gitflow-maven-plugin</artifactId>
+          <configuration>
+            <!-- Do not prefix release numbers with artifactId - GIT contains only one released artifact -->
+            <gitFlowConfig combine.self="override">
+              <releaseBranchPrefix>release/</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+              <versionTagPrefix />
+            </gitFlowConfig>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>external.atlassian.jgitflow</groupId>
+          <artifactId>jgitflow-maven-plugin</artifactId>
+          <configuration>
+            <!-- Do not prefix release numbers with artifactId - GIT contains only one released artifact -->
+            <flowInitContext combine.self="override">
+              <releaseBranchPrefix>release/</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+              <versionTagPrefix />
+            </flowInitContext>
+          </configuration>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
   </build>
 
 </project>
