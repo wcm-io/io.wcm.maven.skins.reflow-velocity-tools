@@ -5,7 +5,7 @@
 
 Velocity tools supporting Reflow Maven skin - derived from https://github.com/andriusvelykis/reflow-maven-skin/tree/master/reflow-velocity-tools
 
-Issues: https://wcm-io.atlassian.net/browse/WTOOL<br/>
+Issues: https://github.com/wcm-io/io.wcm.maven.skins.reflow-velocity-tools/issues<br/>
 Wiki: https://wcm-io.atlassian.net/wiki/<br/>
 Continuous Integration: https://github.com/wcm-io/io.wcm.maven.skins.reflow-velocity-tools/actions<br/>
 Commercial support: https://wcm.io/commercial-support.html
