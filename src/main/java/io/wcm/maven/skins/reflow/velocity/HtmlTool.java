@@ -63,10 +63,12 @@ import org.jsoup.parser.Tag;
 /**
  * An Apache Velocity tool that provides utility methods to manipulate HTML code using
  * <a href="http://jsoup.org/">jsoup</a> HTML5 parser.
+ *
  * <p>
  * The methods utilise <a href="http://jsoup.org/cookbook/extracting-data/selector-syntax">CSS
  * selectors</a> to refer to specific elements for manipulation.
  * </p>
+ *
  * @author Andrius Velykis
  * @since 1.0
  * @see <a href="http://jsoup.org/">jsoup HTML parser</a>
