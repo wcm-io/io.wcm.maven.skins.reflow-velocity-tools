@@ -65,7 +65,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <!-- jsoup HTML parser library @ http://jsoup.org/ -->
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-velocity</artifactId>
+      <version>2.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.jsoup</groupId>
       <artifactId>jsoup</artifactId>
       <version>1.18.3</version>
@@ -91,6 +96,20 @@
           <skipDeploy>true</skipDeploy>
           <skip>true</skip>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-component-metadata</artifactId>
+        <version>2.2.0</version>
+        <executions>
+          <execution>
+            <id>process-classes</id>
+            <goals>
+              <goal>generate-metadata</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
     </plugins>
