@@ -34,7 +34,7 @@
  */
 package io.wcm.maven.skins.reflow.velocity;
 
-import org.apache.maven.doxia.site.decoration.DecorationModel;
+import org.apache.maven.doxia.site.SiteModel;
 import org.apache.maven.project.MavenProject;
 import org.apache.velocity.tools.ToolContext;
 import org.apache.velocity.tools.config.DefaultKey;
@@ -45,12 +45,14 @@ import org.codehaus.plexus.util.xml.Xpp3Dom;
 /**
  * An Apache Velocity tool that simplifies retrieval of custom configuration values for a
  * Maven Site.
+ *
  * <p>
  * The tool is configured to access Maven site configuration of a skin inside {@code <custom>}
  * element of site descriptor. It supports global properties (defined at skin level) and per-page
  * properties (defined in {@code <page><mypage>} element). The per-page properties override the
  * global ones.
  * </p>
+ *
  * <p>
  * A sample configuration would be like that:
  * </p>
@@ -72,17 +74,17 @@ import org.codehaus.plexus.util.xml.Xpp3Dom;
  * </custom>
  * }
  * </pre>
+ *
  * <p>
  * To get the value of {@code prop1}, one would simply use {@code $config.prop1}. This would return
  * "override value1". Then {@code $config.prop2} would return "value2" - the global value.
  * </p>
+ *
  * <p>
  * The tool allows querying the value easily, falling back from page to global configuration to
  * {@code null}, if none is available. It also provides convenience accessors for common values.
  * </p>
- * <p>
- * Note
- * </p>
+ *
  * @author Andrius Velykis
  * @since 1.0
  */
@@ -158,12 +160,11 @@ public class SkinConfigTool extends SafeConfig {
     }
 
     Object decorationObj = ctxt.get("decoration");
-
-    if (!(decorationObj instanceof DecorationModel)) {
+    if (!(decorationObj instanceof SiteModel)) {
       return;
     }
 
-    DecorationModel decoration = (DecorationModel)decorationObj;
+    SiteModel decoration = (SiteModel)decorationObj;
     Object customObj = decoration.getCustom();
 
     if (!(customObj instanceof Xpp3Dom)) {
