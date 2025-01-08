@@ -36,7 +36,7 @@ package io.wcm.maven.skins.reflow.velocity;
 
 import java.net.URI;
 
-import org.apache.maven.doxia.site.decoration.inheritance.URIPathDescriptor;
+import org.apache.maven.doxia.site.inheritance.URIPathDescriptor;
 import org.apache.velocity.tools.config.DefaultKey;
 
 /**

@@ -34,7 +34,7 @@
  */
 package io.wcm.maven.skins.reflow.velocity;
 
-import org.apache.maven.doxia.site.decoration.DecorationModel;
+import org.apache.maven.doxia.site.SiteModel;
 import org.apache.maven.project.MavenProject;
 import org.apache.velocity.tools.ToolContext;
 import org.apache.velocity.tools.config.DefaultKey;
@@ -160,12 +160,11 @@ public class SkinConfigTool extends SafeConfig {
     }
 
     Object decorationObj = ctxt.get("decoration");
-
-    if (!(decorationObj instanceof DecorationModel)) {
+    if (!(decorationObj instanceof SiteModel)) {
       return;
     }
 
-    DecorationModel decoration = (DecorationModel)decorationObj;
+    SiteModel decoration = (SiteModel)decorationObj;
     Object customObj = decoration.getCustom();
 
     if (!(customObj instanceof Xpp3Dom)) {

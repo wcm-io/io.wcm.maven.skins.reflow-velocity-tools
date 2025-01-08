@@ -23,7 +23,13 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
-    <release version="1.0.4" date="not released">
+    <release version="1.1.0" date="not released">
+      <action type="update" dev="sseifert" issue="1">
+        Update to Maven Doxia 2.0.
+      </action>
+      <action type="update" dev="sseifert" issue="1">
+        Configure Velocity 2.x for backward compatibility with Velocity 1.7.
+      </action>
       <action type="update" dev="sseifert">
         Switch to Java 11 as minimum version.
       </action>
