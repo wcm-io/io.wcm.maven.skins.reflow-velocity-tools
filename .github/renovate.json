@@ -6,7 +6,7 @@
     "github>wcm-io/renovate-config:automerge-testing"
   ],
   "ignoreDeps": [
-    "org.apache.maven:*",
-    "org.codehaus.plexus:*"
+    "org.apache.maven:maven-project",
+    "org.codehaus.plexus:plexus-velocity"
   ]
 }
