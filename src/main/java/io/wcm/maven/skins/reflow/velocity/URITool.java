@@ -17,6 +17,8 @@
  * limitations under the License.
  * #L%
  */
+package io.wcm.maven.skins.reflow.velocity;
+
 /*
  * Copyright 2012 Andrius Velykis
  *
@@ -32,7 +34,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.wcm.maven.skins.reflow.velocity;
 
 import java.net.URI;
 
